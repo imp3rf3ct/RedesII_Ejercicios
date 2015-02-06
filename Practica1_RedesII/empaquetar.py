@@ -6,10 +6,9 @@ def openfile():
 
 def main():
     arch = openfile()
-    listado = [22,55,696587878,678454784,256]
-
-    paquete = struct.pack('!BBIIH',listado[0],listado[1],listado[2],listado[3],listado[4])
-
-    arch.write(paquete+"\n")
+    listado = [[22,55,696587878,678454784,256],[19,20,694583478,677874584,60]]
+    for el in listado:
+        paquete = struct.pack('!BBIIH',el[0],el[1],el[2],el[3],el[4])
+        arch.write(paquete+"\n")
 
 main()
