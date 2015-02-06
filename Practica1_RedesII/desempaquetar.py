@@ -38,6 +38,8 @@ def empaquetado(listin_llamada):
         arch.write(struct.pack('!B',el[0]))
         arch.write(struct.pack('!BIIH',el[1],el[2],el[3],el[4]))
 
+    arch.close()
+
 def main():
     listin_llamada = desempaquetado()
     
